@@ -8,7 +8,13 @@ function StudentList(props) {
         {
           props.studentListVar.map(
             (stud, index) => {
-              return (<Student student={stud} key={index}/>)
+              return (<Student 
+                setStudentId={props.setStudentId}
+                setStudentName={props.setStudentName}
+                setStudentEmail={props.setStudentEmail}
+                setStudentPhone={props.setStudentPhone}
+                setStudentList={props.setStudentList}
+                student={stud} key={index}/>)
             }
           )
         }
